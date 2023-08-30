@@ -36,3 +36,19 @@ function removeGrid
 
 
 */
+
+
+let gridsize = 16;
+
+function createGrid(gridsize) {
+    let currentHeight = 0;
+    let currentWidth = 0;
+    for (currentHeight; currentHeight <= gridsize; currentHeight++) {
+        for (currentWidth; currentWidth <= gridsize -1; currentWidth++) {
+            let div = createDiv(currentHeight, currentWidth);
+            // div not have new line
+        }
+        let div = createDiv(currentHeight, currentWidth) 
+        // div have new line
+    }
+}
