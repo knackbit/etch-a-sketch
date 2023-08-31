@@ -39,12 +39,13 @@ function removeGrid
 
 
 let gridsize = 16;
+const gridContainer = document.querySelector('#grid-container');
 
 function createGrid(gridsize) {
     let currentHeight = 0;
     let currentWidth = 0;
-    for (currentHeight; currentHeight <= gridsize; currentHeight++) {
-        for (currentWidth; currentWidth <= gridsize -1; currentWidth++) {
+    for (currentHeight = 0; currentHeight <= gridsize; currentHeight++) {
+        for (currentWidth = 0; currentWidth <= gridsize -1; currentWidth++) {
             let div = createDiv(currentHeight, currentWidth);
             // div not have new line
         }
@@ -52,3 +53,14 @@ function createGrid(gridsize) {
         // div have new line
     }
 }
+
+function createDiv(currentHeight, currentWidth) {
+    divElement = document.createElement('div');
+    const idString = "height-" + currentHeight + "-width-" + currentWidth;
+    divElement.setAttribute('id', idString);
+    // divElement.addEventListener('mouseover', (e) => )  //add change color function
+    gridContainer.appendChild(divElement);
+    return divElement;
+}
+
+
