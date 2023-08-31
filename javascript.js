@@ -59,8 +59,15 @@ function createDiv(currentHeight, currentWidth) {
     const idString = "height-" + currentHeight + "-width-" + currentWidth;
     divElement.setAttribute('id', idString);
     // divElement.addEventListener('mouseover', (e) => )  //add change color function
-    gridContainer.appendChild(divElement);
+    const rowContainer = document.querySelector(`#row-${currentHeight}`);
+    rowContainer.appendChild(divElement);
     return divElement;
 }
 
-
+function createRowContainer(currentHeight) {
+    rowElement = document.createElement('div');
+    const currentHeightStr = "row-" + currentHeight;
+    rowElement.setAttribute('id', currentHeightStr);
+    rowElement.setAttribute('class', 'row-container');
+    gridContainer.appendChild(rowElement);
+}
