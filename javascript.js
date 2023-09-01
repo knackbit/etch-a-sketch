@@ -70,3 +70,5 @@ function createRowContainer(currentHeight) {
     rowElement.setAttribute('class', 'row-container');
     gridContainer.appendChild(rowElement);
 }
+
+createGrid(gridsize);
