@@ -71,4 +71,4 @@ function createRowContainer(currentHeight) {
     gridContainer.appendChild(rowElement);
 }
 
-createGrid(gridsize);
+createGrid(10);

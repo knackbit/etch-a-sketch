@@ -1,22 +1,24 @@
 body {
-    margin: 10px 50px;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+}
+#grid-box {
+    display: flex;
+    width: 100vw;
+    height: 100vw;
+    max-width: 1000px;
+    max-height: 1000px;
 }
 #grid-container {
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-    max-height: 1000px;
-    max-width: 1000px;
-    aspect-ratio: 1;
 }
 
 .row-container {
     display: flex;
-    flex: 1 1 0;
-    align-content: stretch;
+    flex: 1 1 auto;
+
 }
 
 .row-container > div {
@@ -24,14 +26,6 @@ body {
     border: 1px solid red;
 }
 
-.row-container > div:before {
-    float: left;
-}
-
 .black {
     background-color: black;
-}
-
-button {
-    flex-shrink: 0;
 }
