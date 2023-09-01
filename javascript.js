@@ -44,12 +44,13 @@ const gridContainer = document.querySelector('#grid-container');
 function createGrid(gridsize) {
     let currentHeight = 0;
     let currentWidth = 0;
-    for (currentHeight = 0; currentHeight <= gridsize - 1; currentHeight++) {
-        createRowContainer(currentHeight);
+    for (currentHeight = 0; currentHeight <= gridsize; currentHeight++) {
         for (currentWidth = 0; currentWidth <= gridsize -1; currentWidth++) {
-            createDiv(currentHeight, currentWidth);
+            let div = createDiv(currentHeight, currentWidth);
             // div not have new line
         }
+        let div = createDiv(currentHeight, currentWidth) 
+        // div have new line
     }
 }
 
