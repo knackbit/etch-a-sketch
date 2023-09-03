@@ -1,6 +1,11 @@
 body {
-
+    background-color: rgb(187, 14, 14);
 }
+
+* {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 #grid-box {
     display: flex;
     width: 100%;
@@ -19,6 +24,7 @@ body {
 .row-container {
     display: flex;
     flex: 1 1 auto;
+    background-color: white;
 
 }
 
@@ -39,6 +45,7 @@ body {
 
 #create-grid {
     border-radius: 4px;
-    background-color: dodgerblue;
+    background-color: rgb(220, 240, 252);
     align-self: center;
+    padding: 5px 10px;
 }
