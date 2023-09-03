@@ -1,6 +1,5 @@
 body {
-    display: flex;
-    flex-direction: column;
+
 }
 #grid-box {
     display: flex;
@@ -28,4 +27,17 @@ body {
 
 .black {
     background-color: black;
+}
+
+#main-content {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 50px;
+    gap: 10px;
+}
+
+#create-grid {
+    border-radius: 4px;
+    background-color: dodgerblue;
+    align-self: center;
 }
