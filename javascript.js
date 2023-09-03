@@ -48,7 +48,6 @@ function createGrid(gridsize) {
         createRowContainer(currentHeight);
         for (currentWidth = 0; currentWidth <= gridsize -1; currentWidth++) {
             createDiv(currentHeight, currentWidth);
-            // div not have new line
         }
     }
 }
@@ -57,7 +56,9 @@ function createDiv(currentHeight, currentWidth) {
     divElement = document.createElement('div');
     const idString = "height-" + currentHeight + "-width-" + currentWidth;
     divElement.setAttribute('id', idString);
-    // divElement.addEventListener('mouseover', (e) => )  //add change color function
+    divElement.addEventListener('mouseover', (e) => {
+        colorChange(e.target);
+    });  //add change color function
     const rowContainer = document.querySelector(`#row-${currentHeight}`);
     rowContainer.appendChild(divElement);
     return divElement;
@@ -71,4 +72,33 @@ function createRowContainer(currentHeight) {
     gridContainer.appendChild(rowElement);
 }
 
+function colorChange(element) {
+    element.setAttribute('class', 'black');
+}
+
+const btn = document.querySelector('#create-grid');
+btn.addEventListener('click', promptGrid)
+
+function promptGrid() {
+    let rawInput = parseInt(prompt('How many cells wide?'));
+    while(true) {
+        if (Number.isInteger(rawInput) && (1 <= rawInput <= 100)) {
+            removeGrid();
+            createGrid(rawInput);
+            break;
+        }
+        else { 
+            rawInput = prompt('Invalid number.  Enter a number between 1 and 100');
+            break;
+        }
+    }
+}
+
+function removeGrid() {
+    //removes any items in #grid-container
+    div = document.querySelectorAll('#grid-container div');
+    div.forEach((item) => {
+        item.remove()
+    });
+}
 createGrid(10);
