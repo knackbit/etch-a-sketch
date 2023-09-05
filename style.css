@@ -39,8 +39,9 @@ body {
 #main-content {
     display: flex;
     flex-direction: column;
-    margin: 10px 50px;
+    margin: 10px auto;
     gap: 10px;
+    max-width: 1000px;
 }
 
 #create-grid {
