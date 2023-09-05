@@ -72,8 +72,14 @@ function createRowContainer(currentHeight) {
     gridContainer.appendChild(rowElement);
 }
 
+// changes color from white to black in 10% increments
 function colorChange(element) {
     element.setAttribute('class', 'black');
+    let opacityStr = element.style.opacity;
+    let opecInt = Number(opacityStr);
+    opecInt += .1;
+    opacityStr = `${opecInt}`;
+    element.style.opacity = opacityStr;
 }
 
 const btn = document.querySelector('#create-grid');
